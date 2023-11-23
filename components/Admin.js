@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const SocialHebbalContainer = () => {
+const Admin = () => {
   const [data, setData] = useState(null);
   const [id, setId] = useState(null);
   const [token, setToken] = useState(null);
@@ -12,20 +12,16 @@ const SocialHebbalContainer = () => {
   const [category_9, setCategory_9] = useState('');
   const [category_10, setCategory_10] = useState('');
 
-
   useEffect(() => {
-    // Get the id and token from local storage
     setId(localStorage.getItem('id'));
     setToken(localStorage.getItem('token'));
   }, []);
 
   useEffect(() => {
     if (!id || !token) {
-      // The id or token has not been loaded yet, skip this effect
       return;
     }
 
-    // Fetch the admin details when the id and token are loaded
     fetch(`https://stg.dhunjam.in/account/admin/${id}`, {
       method: 'GET',
       headers: {
@@ -39,7 +35,6 @@ const SocialHebbalContainer = () => {
   }, [id, token]);
 
   const handleSave = async () => {
-    // Update the price
     const response = await fetch(`https://stg.dhunjam.in/account/admin/${id}`, {
       method: 'PUT',
       headers: {
@@ -60,7 +55,6 @@ const SocialHebbalContainer = () => {
     const data = await response.json();
     if (data.status === 200) {
       alert('Update successful');
-      // Fetch the updated admin details
       fetch(`https://stg.dhunjam.in/account/admin/${id}`, {
         method: 'GET',
         headers: {
@@ -72,13 +66,11 @@ const SocialHebbalContainer = () => {
           setData(data.data);
         });
     } else {
-      // Show an error message
       alert('Update failed');
     }
   };
 
   if (!data) {
-    // The data has not been loaded yet, show a loading message
     return <div>Loading...</div>;
   }
 
@@ -134,7 +126,7 @@ const SocialHebbalContainer = () => {
               value={amount.category_8}
               type="number"
               onChange={(e) => setCategory_8(e.target.value)}
-              disabled={!chargeCustomers}
+              disabled={!chargeCustomers || category_6 < category_7}
             />
             <input
               className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
@@ -142,7 +134,7 @@ const SocialHebbalContainer = () => {
               value={amount.category_9}
               type="number"
               onChange={(e) => setCategory_9(e.target.value)}
-              disabled={!chargeCustomers}
+              disabled={!chargeCustomers || category_6 < category_7 || category_7 < category_8}
             />
             <input
               className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
@@ -150,7 +142,7 @@ const SocialHebbalContainer = () => {
               value={amount.category_10}
               type="number"
               onChange={(e) => setCategory_10(e.target.value)}
-              disabled={!chargeCustomers}
+              disabled={!chargeCustomers || category_6 < category_7 || category_7 < category_8 || category_8 < category_9}
             />
           </div>
         </div>
@@ -175,4 +167,4 @@ const SocialHebbalContainer = () => {
   );
 };
 
-export default SocialHebbalContainer;
+export default Admin;
