@@ -66,7 +66,7 @@ const Form = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className="self-stretch flex flex-col items-center justify-start gap-[19px]">
-          <button className="cursor-pointer py-0 px-[15px] bg-blueviolet self-stretch rounded-lg box-border h-[58px] flex flex-row items-center justify-center border-[1px] border-solid hover:border-thistle">
+          <button className="cursor-pointer py-0 px-[15px] bg-blueviolet self-stretch rounded-lg box-border h-[58px] flex flex-row items-center justify-center border-[1px] border-solid hover:border-thistle" type='submit'>
             <b className="self-stretch flex-1 relative text-base flex font-regular-font text-white text-center items-center justify-center">
               Sign In
             </b>
