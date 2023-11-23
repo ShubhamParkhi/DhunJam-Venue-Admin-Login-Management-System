@@ -1,4 +1,4 @@
-# Resto-Bar Management System
+# DhunJam's Venue Admin Login Management System
 
 ## Overview
 This project is a web-based application for managing DhunJam's Venue Admin Login. It allows the admin to log in, view and update the pricing for song requests.
