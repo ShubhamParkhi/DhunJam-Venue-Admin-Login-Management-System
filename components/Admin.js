@@ -184,7 +184,7 @@ const Admin = () => {
           Save
         </b>
       </button>
-      <ToastContainer />
+      <ToastContainer limit={3} />
     </div>
   );
 };

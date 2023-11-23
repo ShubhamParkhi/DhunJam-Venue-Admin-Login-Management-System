@@ -76,7 +76,7 @@ const Form = () => {
           </button>
         </div>
       </form>
-      <ToastContainer  style={{ width: "400px" }} />
+      <ToastContainer limit={3} style={{ width: "400px" }} />
     </div>
   );
 };
