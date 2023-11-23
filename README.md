@@ -20,7 +20,7 @@ This project is a web-based application for managing DhunJam's Venue Admin Login
 - **Admin Price Update (PUT)**: Used for updating the song request prices.
 
 ## Styling
-The application uses the Poppins font family, with a font size of 32px for headings and 16px for all other text. The screen background is #030303, the font color is #FFFFFF, the button color is #6741D9 with a border of 1px and border-color is #F0C3F1 and the graph bar color is #F0C3F1 
+The application uses the Poppins font family, with a font size of 32px for headings and 16px for all other text. The screen background is #030303, the font color is #FFFFFF, the button color is #6741D9 with a border of 1px and border-color #F0C3F1 and the graph bar color is #F0C3F1 
 
 ## Development
 To get started with development, clone the repository and install the necessary dependencies. Make sure to update the API endpoints with your server's information.
