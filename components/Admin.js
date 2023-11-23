@@ -121,7 +121,7 @@ const SocialHebbalContainer = () => {
           </div>
           <div className="flex-1 flex flex-row items-center gap-[10px] justify-start max-w-[300px]">
             <input
-              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
+              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
               placeholder={data.amount.category_7}
               value={amount.category_7}
               type="number"
@@ -129,7 +129,7 @@ const SocialHebbalContainer = () => {
               disabled={!chargeCustomers}
             />
             <input
-              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
+              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
               placeholder={data.amount.category_8}
               value={amount.category_8}
               type="number"
@@ -137,7 +137,7 @@ const SocialHebbalContainer = () => {
               disabled={!chargeCustomers}
             />
             <input
-              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
+              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
               placeholder={data.amount.category_9}
               value={amount.category_9}
               type="number"
@@ -145,7 +145,7 @@ const SocialHebbalContainer = () => {
               disabled={!chargeCustomers}
             />
             <input
-              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
+              className="font-regular-font text-white text-base bg-[transparent] max-w-[67.5px] flex-1 rounded-lg box-border flex flex-row items-center justify-center py-2.5 px-[5px] my-[5px] border-[1px] border-solid border-white text-center [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none disabled:border-[#c2c2c2] disabled:text-[#c2c2c2]"
               placeholder={data.amount.category_10}
               value={amount.category_10}
               type="number"
