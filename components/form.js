@@ -11,7 +11,6 @@ const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Call the login API
     const response = await fetch('https://stg.dhunjam.in/account/admin/login', {
       method: 'POST',
       headers: {
@@ -26,14 +25,11 @@ const Form = () => {
     const data = await response.json();
 
     if (data.status === 200) {
-      // Store the token and id in local storage
       localStorage.setItem('token', data.data.token);
       localStorage.setItem('id', data.data.id);
 
-      // Redirect to the dashboard page
       router.push('/dashboard');
     } else {
-      // Show an error message
       toast.error('Incorrect Username and/or Password!', {
         position: "bottom-right",
         autoClose: 5000,
