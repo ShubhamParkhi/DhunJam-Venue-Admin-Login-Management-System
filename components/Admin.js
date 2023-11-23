@@ -8,13 +8,13 @@ const Admin = () => {
   const [id, setId] = useState(null);
   const [token, setToken] = useState(null);
   const [chargeCustomers, setChargeCustomers] = useState(true);
-  const [amount, setAmount] = useState('');
   const [category_6, setCategory_6] = useState('');
   const [category_7, setCategory_7] = useState('');
   const [category_8, setCategory_8] = useState('');
   const [category_9, setCategory_9] = useState('');
   const [category_10, setCategory_10] = useState('');
-
+  const amount = useState('');
+  
   useEffect(() => {
     setId(localStorage.getItem('id'));
     setToken(localStorage.getItem('token'));
