@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
   const [username, setUsername] = useState('DJ@4');
@@ -32,7 +34,16 @@ const Form = () => {
       router.push('/dashboard');
     } else {
       // Show an error message
-      alert('Login failed');
+      toast.error('Incorrect Username and/or Password!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 
@@ -65,6 +76,7 @@ const Form = () => {
           </button>
         </div>
       </form>
+      <ToastContainer  style={{ width: "400px" }} />
     </div>
   );
 };

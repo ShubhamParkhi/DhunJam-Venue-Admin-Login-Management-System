@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Admin = () => {
   const [data, setData] = useState(null);
@@ -54,7 +57,16 @@ const Admin = () => {
 
     const data = await response.json();
     if (data.status === 200) {
-      alert('Update successful');
+      toast.success('Update Successful!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       fetch(`https://stg.dhunjam.in/account/admin/${id}`, {
         method: 'GET',
         headers: {
@@ -66,7 +78,16 @@ const Admin = () => {
           setData(data.data);
         });
     } else {
-      alert('Update failed');
+      toast.error('Update failed!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 
@@ -163,6 +184,7 @@ const Admin = () => {
           Save
         </b>
       </button>
+      <ToastContainer />
     </div>
   );
 };
